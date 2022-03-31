@@ -1,8 +1,13 @@
-#!/usr/local/bin/sbcl
+
+
+(DEFCONSTANT +input-file+ "./data/nhtsa-tesla-fire.txt")
+(DEFCONSTANT +output-file+ "./output.tsv")
 
 (load "pluto.lisp")
-
 (use-package :pluto)
+
+(ql:quickload :charon)
+(use-package :charon)
 
 (defvar /reports/ nil)
 
